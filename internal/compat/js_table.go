@@ -364,6 +364,8 @@ var jsTable = map[JSFeature]map[Engine][]versionRange{
 		Node:    {{start: v{6, 0, 0}}},
 		Opera:   {{start: v{36, 0, 0}}},
 		Safari:  {{start: v{11, 0, 0}}},
+		// Crisp: we built in support for this manually
+		Hermes:	 {{start: v{0, 1, 0}}},
 	},
 	DefaultArgument: {
 		Chrome:  {{start: v{49, 0, 0}}},

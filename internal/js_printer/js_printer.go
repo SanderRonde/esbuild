@@ -3924,11 +3924,8 @@ func (p *printer) printStmt(stmt js_ast.Stmt, flags printStmtFlags) {
 	case *js_ast.SLocal:
 		p.addSourceMapping(stmt.Loc)
 		switch s.Kind {
-		case js_ast.LocalConst:
-			p.printDeclStmt(s.IsExport, "const", s.Decls)
-		case js_ast.LocalLet:
-			p.printDeclStmt(s.IsExport, "let", s.Decls)
-		case js_ast.LocalVar:
+			// Crisp: const and let are not allowed in hermes, use `var` instea
+		case js_ast.LocalConst, js_ast.LocalLet, js_ast.LocalVar:
 			p.printDeclStmt(s.IsExport, "var", s.Decls)
 		}
 
