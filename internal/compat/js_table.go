@@ -211,6 +211,8 @@ var jsTable = map[JSFeature]map[Engine][]versionRange{
 		Node:    {{start: v{7, 6, 0}}},
 		Opera:   {{start: v{42, 0, 0}}},
 		Safari:  {{start: v{11, 0, 0}}},
+		// Crisp: ensure async/await is polyfilled
+		Hermes:  {{start: v{1, 0, 0}}},
 	},
 	AsyncGenerator: {
 		Chrome:  {{start: v{63, 0, 0}}},
@@ -454,6 +456,8 @@ var jsTable = map[JSFeature]map[Engine][]versionRange{
 		Node:    {{start: v{6, 0, 0}}},
 		Opera:   {{start: v{37, 0, 0}}},
 		Safari:  {{start: v{10, 0, 0}}},
+		// Crisp: mark that generators are supported
+		Hermes:  {{start: v{0, 7, 0}}},
 	},
 	Hashbang: {
 		Chrome:  {{start: v{74, 0, 0}}},
